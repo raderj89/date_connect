@@ -1,0 +1,11 @@
+= simple_form_for @user do |f|
+  = render 'shared/error_messages', object: f.object
+  .user-select
+    .select-arrow
+    = f.input :match_gender, label: 'My perfect match is:', collection: ['male', 'female'], input_html: { class: 'match-select'}, error: false
+  .user-select
+    .select-arrow
+    = f.input :match_relationship_status, label: 'They are currently:', collection: ['single', 'in a relationship'], input_html: { class: 'match-select' }, error: false
+  = f.input :match_location, label: 'They live in:', error: false
+  = f.input :match_religion, label: 'Their religious views are:', error: false
+  = f.button :submit, value: 'Calculate'

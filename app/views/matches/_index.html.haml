@@ -1,0 +1,23 @@
+- matches.each do |match|
+  .match
+    .match-image{:style => "background-image: url('https://graph.facebook.com/#{match.uid}/picture?type=large')"}
+    .name
+      = link_to match.name, user_match_path(@user, match)
+    .dots-container
+      - if is_match?(@user.match_relationship_status, match.relationship_status)
+        .dot#red
+      - if is_match?(@user.match_location, match.location)
+        .dot#orange
+      - if is_match?(@user.match_gender, match.gender)
+        .dot#light-green
+      - if is_match?(@user.match_religion, match.religion)
+        .dot#dark-green
+      - if match.shared_interests.count > 0
+        .dot#yellow
+    .percent
+      .number
+        = "#{number_to_percentage(match.match_percent, precision: 0)}"
+      of the dots connect!
+    .arrow
+      = link_to root_path(@user) 
+

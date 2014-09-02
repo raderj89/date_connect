@@ -1,0 +1,87 @@
+@import variables
+.pages-home-container
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-image: image-url('splash.jpg')
+  background-position: center
+  background-size: cover 
+  background-repeat: no-repeat
+
+  .logo
+    padding: 2em 0 2em 8em
+
+    @media screen and (max-width: 400px)
+      padding: 5em 0 2.5em 0
+      text-align: center
+
+  .header
+    text-align: center
+    font-family: $lato
+    font-size: 3em
+    font-weight: 100
+    width: 40%
+    margin: .8em auto
+    text-transform: uppercase
+    line-height: 58px
+    cursor: default
+    @media screen and (max-width: 400px)
+      width: 100%
+      font-size: 1em
+      line-height: 24px
+    
+    p
+      color: #fff
+      span
+        font-weight: 800
+
+  .sub-header
+    width: 40%
+    margin: 0 auto
+    text-align: center
+    font-size: 2em
+    font-family: $lato
+    color: #fff
+    font-weight: 100
+    font-style: italic
+    cursor: default
+
+    @media screen and (max-width: 400px)
+      font-size: 1em
+      width: 100%
+
+  .facebook-login-button
+    width: 40%
+    margin: 0 auto
+    text-align: center
+    padding: 2em
+    margin-top: 2em
+    font-weight: light
+
+    @media screen and (max-width: 400px)
+      width: 100%
+
+    a
+      text-decoration: none
+      color: #fff
+      padding: 1.5em
+      background: #3C5794
+      font-family: 'Lucida Grande'
+      
+      @media screen and (max-width: 400px)
+        font-size: .8em
+        padding: 1em
+
+
+      span#f
+        font-weight: 800
+        font-size: 1.25em
+        padding: 1em .5em 0 0
+
+        @media screen and (max-width: 400px)
+          font-size: .75em
+      
+
+      

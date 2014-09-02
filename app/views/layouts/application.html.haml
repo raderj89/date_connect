@@ -1,0 +1,36 @@
+!!! 5
+%html
+  %head
+    %title
+      Date Connect
+    
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+    = favicon_link_tag 'favicon.ico'
+    %link{ href: 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700', rel: 'stylesheet', type: 'text/css' }
+    %meta{ name: "viewport", content: "initial-scale=1, maximum-scale=1" }
+    = csrf_meta_tags
+%body{ class: "#{params[:controller] +"_"+ params[:action]}"}
+  %nav
+    .container
+      .logo
+        = image_tag "logo.png"
+      - if signed_in?
+        %ul.nav-options
+          %li#matches
+            = link_to "matches", user_path(@user)
+            .triangles#matches
+          %li#favorites
+            = link_to "favorites", user_favorites_path(@user)
+            .triangles#favorites
+          %li#logout
+            = link_to "log out", "/logout"
+            .triangles#logout
+  
+  .container
+    - flash.each do |type, msg|
+      = content_tag :div, class: "alert alert-#{type}" do
+        %button.close{ type: 'button', data: { dismiss: "alert"} }
+          %span x
+        = msg
+    = yield

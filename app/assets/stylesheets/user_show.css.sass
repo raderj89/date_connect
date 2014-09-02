@@ -1,0 +1,168 @@
+// User Show page
+.matches-index-container
+  .matches-content-container
+
+    .perfect-match-container
+      width: 50%
+      padding-top: 2em
+      max-width: 410px
+      display: inline-block
+      float: left
+
+      @media screen and (max-width: 400px)
+        width: 100%
+
+      .header
+        display: block
+
+        h2
+          font-size: 1.8em
+          display: inline-block
+          
+          @media screen and (max-width: 400px)
+            font-size: .75em
+        a.edit-link
+          float: right
+          border-bottom: 4px solid $green
+          text-decoration: none
+          color: #aaa
+
+          @media screen and (max-width: 400px)
+            font-size: .7em
+
+      .match-preferences
+        @include match-preferences
+        @media screen and (max-width: 400px)
+          width: 100%
+          min-width: 280px
+          padding: 0
+
+          ul
+            li
+              padding: .6em
+              
+              div
+                background-size: 36px
+                width: 36px
+                height: 36px
+                margin: 0 0 -10px 18px
+
+              span
+                font-size: .8em
+
+
+    .matches-list-container
+      width: 45%
+      min-width: 500px
+      position: relative
+      float: right
+
+      @media screen and (max-width: 400px)
+        width: 100%
+        min-width: 300px
+
+      .load-status
+        padding-top: 2em
+
+      .match
+        padding: 2em
+        width: 100%
+        cursor: pointer
+
+        &:hover
+          .arrow
+            background-position-y: -50px
+        
+        .match-image
+          width: 150px
+          height: 150px
+          background-size: cover
+          border-radius: 100%
+          display: inline-block
+          margin-right: 2em
+
+          @media screen and (max-width: 400px)
+            width: 78px
+            height: 78px
+
+        .name
+          display: inline-block
+          position: absolute
+          width: 100%
+
+          @media screen and (max-width: 400px)
+            width: 60%
+
+          a
+            border-bottom: 4px solid black
+            text-decoration: none
+            font-weight: bold
+            text-transform: uppercase
+            color: #000
+            font-size: 1.5em
+
+            @media screen and (max-width: 400px)
+              font-size: .75em
+              border-bottom: 2px solid black
+
+        .dots-container
+          display: inline
+          position: relative
+          top: -86px
+
+          @media screen and (max-width: 400px)
+            top: -30px
+
+          .dot
+            display: inline-block
+            width: 20px
+            height: 20px
+            border-radius: 100%
+            @media screen and (max-width: 400px)
+            width: 15px
+            height: 15px
+
+          .dot#red
+            background: $red
+
+          .dot#orange
+            background: $orange
+
+          .dot#light-green
+            background: #5ACC6B
+
+          .dot#dark-green
+            background: #00BCA5
+
+          .dot#yellow
+            background: $yellow
+
+        .percent
+          float: right
+          margin: -42px 62px 0 0
+          @media screen and (max-width: 400px)
+            margin: 0
+            font-size: .7em
+
+          .number
+            display: inline
+            font-weight: 800
+            @media screen and (max-width: 400px)
+              font-size: .7em
+            
+        
+        .arrow
+          float: right
+          background-image: image-url('right_arrow.png')
+          width: 33px
+          height: 50px
+          position: relative
+          bottom: 92px
+
+          @media screen and (max-width: 400px)
+            position: relative
+            left: 164px
+            bottom: 52px
+          a
+            display: none
+

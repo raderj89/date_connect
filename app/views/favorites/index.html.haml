@@ -1,0 +1,12 @@
+.matches-index-container
+  .matches-content-container
+    .perfect-match-container
+      .header
+        %h2 YOUR PERFECT MATCH
+        = link_to "edit", edit_user_path(@user), class: 'edit-link'
+      = render 'users/match_preferences', locals: @user
+
+    
+    .matches-list-container 
+      - if @user.matches.any?
+        = render partial: 'matches/index', locals: {matches: @favorites}

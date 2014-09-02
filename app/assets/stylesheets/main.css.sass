@@ -1,0 +1,78 @@
+@import variables
+body
+  font-family: $lato
+  width: 80%
+  max-width: 1000px
+  margin: 0 auto  
+  .header
+    width: 80%
+    margin: 0 auto
+nav
+  .logo
+    padding: 1em
+    display: inline-block
+  .nav-options
+    display: inline-block
+    width: 30%
+    min-width: 438px
+    float: right
+    margin: 0 auto
+
+    @media screen and (max-width: 400px)
+      display: block
+      min-width: 180px
+      width: 50%
+      float: none
+      margin: 0 auto
+
+      ul 
+        width: 300px
+
+    li
+      width: 33%
+      display: inline-block
+      width: 118px
+      padding: 2em 0 0 0
+      margin: .5em
+      font-family: $lato
+      font-weight: 100
+      font-size: .8em
+      padding-bottom: .5em
+      text-align: center
+
+      @media screen and (max-width: 400px)
+        display: block
+        margin: 0 25px
+
+      a
+        text-decoration: none
+        color: #000
+        
+      .triangles
+        display: none
+        width: 5px
+        height: 5px
+        position: relative
+        left: -26px
+        top: 38px
+        width: 0 
+        height: 0 
+        border-left: 8px solid transparent
+        border-right: 8px solid transparent
+          
+        border-top: 8px solid #f00
+        
+        &#matches
+          border-top: 8px solid $green
+
+        &#favorites
+          border-top: 8px solid $orange
+
+        &#logout
+          border-top: 8px solid $blue
+    li#matches
+      border-bottom: 4px solid $green
+    li#favorites
+      border-bottom: 4px solid $orange
+    li#logout
+      border-bottom: 4px solid $blue

@@ -1,0 +1,40 @@
+.match-image-container
+  .match-image{ style: "background-image: url('https://graph.facebook.com/#{@match.uid}/picture?type=large')" }
+  .match-image-deck
+    %h1= @match.name
+    .match-controls
+      .new-favorite
+        - if @match.is_favorite?(@user)
+          .star-icon.favorite
+          = link_to "add to favorites", user_favorites_path(@user, @match), data: {favorite_id: @match.favorite_id(@user)}
+        - else    
+          .star-icon
+          = link_to "add to favorites", user_favorites_path(@user, @match)
+      .facebook-link
+        .facebook-icon
+        = link_to "view on facebook", "https://facebook.com/#{@match.uid}"
+.match-percentage
+  %span.percent= number_to_percentage(@match.match_percent, precision: 0) 
+  %br/
+  connection
+  - if is_match?(@match.relationship_status, @user.match_relationship_status)
+    .line#relationship
+  - if is_match?(@match.location, @user.match_location)
+    .line#location
+  - if is_match?(@match.gender, @user.match_gender)
+    .line#gender
+  - if is_match?(@match.religion, @user.match_religion)
+    .line#religion
+  - if @match.shared_interests.count > 0
+    .line#interests
+= render 'match_info_list', locals: @match
+
+:javascript
+window.onload = function() {
+  window.name = "User Match Show"
+  window.userId = "#{@user.id}"
+  window.matchId = "#{@match.id}"  
+}
+
+
+

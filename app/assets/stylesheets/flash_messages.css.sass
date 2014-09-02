@@ -1,0 +1,55 @@
+@import variables
+
+.alert
+  width: 100%
+
+.alert-notice
+  background: $yellow
+  padding: 10px
+
+  .close
+    border: 0
+    background: transparent
+    cursor: pointer
+    position: relative
+    float: right
+    top: -2px
+
+    span
+      line-height: 1
+      font-weight: 700
+      font-size: 14px
+
+.alert-error
+  color: $red
+  padding-left: 0 
+  font-weight: 700
+
+
+#error_explanation
+  margin-bottom: 10px
+  
+  .close
+    border: 0
+    background: transparent
+    cursor: pointer
+    position: relative
+    float: right
+    top: -2px
+    
+    span
+      line-height: 1
+      font-weight: 700
+      font-size: 14px
+      color: $red
+
+  ul
+    color: $red
+    margin-left: 10px
+
+    li
+      padding: 10px
+
+      &:last-child
+        padding-bottom: 15px
+

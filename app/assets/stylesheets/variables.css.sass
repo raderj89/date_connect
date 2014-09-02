@@ -1,0 +1,59 @@
+// Font
+$lato: 'Lato', sans-serif
+
+// Colors
+$red: #FF1053
+$orange: #FF6D00
+$green: #5ACC6B
+$blue: #00BCA5
+$yellow: #E3E000
+$black: #474747
+$dark-gray: #BABABA
+$light-gray: #E7EAE9
+
+// Match Preferences List Mixin
+@mixin match-preferences
+  width: 70%
+  min-width: 400px
+  margin: 0 auto
+  padding: 2em
+
+  ul
+
+    li
+      padding: 1em
+
+      div
+        width: 58px
+        height: 58px
+        background-size: 100%
+        background-repeat: no-repeat
+        display: inline-block
+        margin: 1em 1.5em -1.5em 0
+
+
+      .heart-icon
+        background-image: image-url('heart.png')
+
+      .location-icon
+        background-image: image-url('location.png')
+
+      .gender-icon
+        background-image: image-url('gender.png')
+
+      .religion-icon
+        background-image: image-url('religion.png')
+
+      .shared-interests
+        background-image: image-url('interests.png')
+
+      span.preference, span#interests-number
+        display: inline-block
+        font-weight: 800
+
+      span
+        display: inline-block
+
+
+
+

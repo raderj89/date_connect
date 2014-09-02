@@ -1,0 +1,12 @@
+- if object.errors.any?
+  #error_explanation
+    %button.close
+      %span x
+    .alert.alert-error
+      The form contains
+      = "#{pluralize(object.errors.count, "error")}:"
+    %ul
+      - object.errors.messages.each_value do |msg|
+        %li
+          *
+          = msg.first

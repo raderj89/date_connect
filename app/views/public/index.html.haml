@@ -1,0 +1,20 @@
+.pages-home-container
+  .logo
+    = image_tag "logo_white.png"
+  .header
+    %p 
+      Your 
+      %span
+        Perfect Match
+      was 
+      %span
+        Right in Front of You    
+      All Along
+  .sub-header
+    We'll point them out
+  .facebook-login-button
+    - if signed_in?
+      %p Welcome
+      = link_to "Log out with Facebook", "/logout"
+    - else
+      = link_to raw("<span id='f'>f</span> connect with facebook"), "/auth/facebook"

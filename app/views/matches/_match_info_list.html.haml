@@ -1,0 +1,40 @@
+.match-info-list
+  %ul
+    %li#relationship
+      .heart-icon 
+      %span 
+        is 
+        %span.preference= @match.relationship_status
+    %li#location
+      .location-icon 
+      %span 
+        lives in 
+        %span.preference= @match.location
+    %li#gender 
+      .gender-icon
+      %span 
+        is 
+        %span.preference= @match.gender
+    %li#religion 
+      .religion-icon
+      %span 
+        is 
+        %span.preference= @match.religion
+    %li#interests
+      .shared-interests
+      %span
+        - if @match.shared_interests.empty?
+          shares 
+          %span#interests-number 0 interests 
+          with you
+        - else
+          shares
+          %span#interests-number
+            =@match.shared_interests.count
+            interests
+          with you
+          %br/
+          (
+          = @match.shared_interests.map(&:interest).join(", ")
+
+          )

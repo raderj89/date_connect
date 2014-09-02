@@ -1,0 +1,22 @@
+.match-preferences
+  %ul
+    %li
+      .heart-icon 
+      %span 
+        is 
+        %span.preference= @user.match_relationship_status
+    %li
+      .location-icon 
+      %span 
+        lives in 
+        %span.preference= @user.match_location
+    %li 
+      .gender-icon
+      %span 
+        is 
+        %span.preference= @user.match_gender
+    %li 
+      .religion-icon
+      %span 
+        is 
+        %span.preference= @user.match_religion

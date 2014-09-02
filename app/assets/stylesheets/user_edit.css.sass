@@ -1,0 +1,76 @@
+@import variables
+
+// Edit preferences page
+*
+  box-sizing: border-box
+
+.container
+  width: 100%
+  margin: 0 auto
+
+  .user-match-form-container
+    margin: 0 auto
+    padding-top: 100px
+    width: 50%
+    @media screen and (max-width: 768px)
+      width: 100%
+
+    .user-match-form-description
+      margin-bottom: 20px
+
+
+      h1
+        font-weight: 700
+        font-size: 28px
+        margin-bottom: 10px
+
+      p
+        font-size: 14px
+        word-spacing: 2px
+
+    .user-match-form
+      width: 75%
+      @media screen and (max-width: 768px)
+        width: 95%
+
+      .user-select
+        position: relative
+
+        .select-arrow
+          position: absolute
+          top: 33px
+          right: 10px
+          border-left: 5px solid transparent
+          border-right: 5px solid transparent
+          border-top: 5px solid #000
+
+      label
+        font-weight: 700
+        font-size: 14px
+        display: block
+
+      input[type="text"], select.match-select
+        width: 100%
+        background: $light-gray
+        height: 35px
+        margin: 4px 0 10px 0
+        border: 0
+        padding: 5px 10px
+        border-radius: 0
+        -webkit-appearance: none
+
+      input.btn
+        border: 2px solid $dark-gray
+        padding: 10px
+        width: 125px
+        background: #fff
+        color: $blue
+        margin-top: 15px
+        @media screen and (max-width: 768px)
+          width: 100%
+
+        &:hover
+          background: $blue
+          color: #fff
+          cursor: pointer
+          -webkit-transition: 0.2s
