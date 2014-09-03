@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
-gem 'mysql2'
 
 gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
@@ -30,4 +29,10 @@ group :development do
   gem 'capistrano-rails'
   gem 'awesome_print'
   gem 'quiet_assets'
+  gem 'mysql2'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
 end

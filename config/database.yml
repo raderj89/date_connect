@@ -13,7 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-
+  username: raderj89
+  password: "#!rongzhenjunx7786"
 
 development:
   <<: *default
@@ -47,4 +48,4 @@ test:
 #
 production:
   <<: *default
-  database: dateconnect_production
+  database: dateconnect
